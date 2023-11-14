@@ -9,7 +9,7 @@ model = BertForNextSentencePrediction.from_pretrained(r'E:\LLM的模型\bert-bas
 
 
 
-MERGE_RATIO = 0.9   # 阈值分数（自定义）
+MERGE_RATIO = 0.9  # 阈值分数（自定义）
 TEMPERATURE = 3  # 温度函数 自定义
 
 def is_nextsent(sent, next_sent):
@@ -26,8 +26,8 @@ def is_nextsent(sent, next_sent):
         return False
 
 # # # 示例用法
-sent1 = "电"
-sent2 = "话：0519-86622772"
+sent1 = "本合同中约定的附件与本合同具有同等法律效力，如有。"
+sent2 = "第十一条合同签订及期限"
 
 result = is_nextsent(sent1, sent2)
 print(result)
